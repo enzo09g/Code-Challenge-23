@@ -6,7 +6,6 @@ function traerDatos() {
     fetch(DATA_URL)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             hacerTable(data);
         })
 }
@@ -31,7 +30,7 @@ function hacerTable(array) {
             <td>${element.apellido}</td>
             <td>${element.grupo}</td>
             <td>${element.sala}</td>
-            <td><button id="${element._id}" class="btn btn-danger boton">Delete</td>
+            <td><button id="${element._id}" class="btn btn-danger boton"><img src="image/file-x.svg"></td>
         </tr>
         `
     });
