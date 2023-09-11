@@ -38,7 +38,10 @@ function hacerTable(array) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    traerDatos()
+    
+    setTimeout(traerDatos, 0)   // Retrasa la ejecucion de la funcion 
+    setInterval(traerDatos, 1500) // EJecuta la funcion en intervalos de tiempo segun su parametro
+    
     let tabla = document.getElementById('tablaDatos');
 
     tabla.addEventListener('click', (e) => {
@@ -47,3 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
         borrar(id)
     })
 })
+
