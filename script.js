@@ -30,7 +30,7 @@ function hacerTable(array) {
             <td>${element.apellido}</td>
             <td>${element.grupo}</td>
             <td>${element.sala}</td>
-            <td><button id="${element._id}" class="btn btn-danger boton"><img src="image/file-x.svg"></td>
+            <td><button id="${element._id}" class="btn btn-danger boton"></td>
         </tr>
         `
     });
