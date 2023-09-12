@@ -30,23 +30,29 @@ function hacerTable(array) {
             <td>${element.apellido}</td>
             <td>${element.grupo}</td>
             <td>${element.sala}</td>
-            <td><button id="${element._id}" class="btn btn-danger boton"><img src="image/file-x.svg"></td>
+            <td><button id="${element._id}" class="btn btn-danger boton"></td>
         </tr>
         `
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     setTimeout(traerDatos, 0)   // Retrasa la ejecucion de la funcion 
     setInterval(traerDatos, 1500) // EJecuta la funcion en intervalos de tiempo segun su parametro
-    
+
     let tabla = document.getElementById('tablaDatos');
 
     tabla.addEventListener('click', (e) => {
-        let id = e.target.id;
-        console.log(id);
-        borrar(id)
+
+        if(e.target.tagName == 'BUTTON'){
+            console.dir(e.target.tagName)
+            let id = e.target.id;
+            console.log(id);
+            borrar(id)
+        }
+
+
     })
 })
 
